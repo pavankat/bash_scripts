@@ -3,6 +3,9 @@
 * notes here were taken from: 
 	* http://www.howtogeek.com/67469/the-beginners-guide-to-shell-scripting-the-basics/
 
+* decent resources:
+	* http://www.freeos.com/guides/lsst/
+
 * Scripts are executed like programs, and in order for this to happen they need to have the proper permissions. You can make scripts executable by running the following command on it:
 
 * This will allow anyone to run that particular script
