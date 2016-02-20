@@ -1,14 +1,16 @@
 # Script Permissions and Names
 
-* notes here were taken from here: 
+* notes here were taken from: 
 	* http://www.howtogeek.com/67469/the-beginners-guide-to-shell-scripting-the-basics/
 
 * Scripts are executed like programs, and in order for this to happen they need to have the proper permissions. You can make scripts executable by running the following command on it:
 
 * This will allow anyone to run that particular script
+* 
 `chmod +x ~/somecrazyfolder/script1`
 
 * If you want to restrict its use to just your user, you can use this instead:
+* 
 `chmod u+x ~/somecrazyfolder/script1`
 
 * to run a bash script
@@ -24,9 +26,3 @@
 `which scriptNameHere`
 
 * comments start off with the # tag
-
-
-
-
-
-~/bin
