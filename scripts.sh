@@ -1,20 +1,29 @@
 #!/bin/bash
 
-# files are like this: 10-dfdsfsdfsdf.html
+# files are like this: 10-dsfsdfjsldf.html
 
-# take the beginning number and add 3 to it for all the .html files in the directory
+# for all the .html files in the directory, rename the files so that the beginning number has 2 added to it
 
 for full_filename in *.html; do extension="${full_filename##*.}"
 	filename="${full_filename%.*}"
 	first_two_characters="${filename:0:2}"
-	rest_characters="${filename:2:5}"
 
-	num=$((first_two_characters + 1))
+	num=$((first_two_characters + 2))
 
 	echo "${num}"
-	echo "${rest_characters}"
 
-	echo ${full_filename:2}  
+	filename_without_first_two_chars=${full_filename:2}
+
+	echo ${filename_without_first_two_chars}
+
+	num+="-"
+	num+=filename_without_first_two_chars
+	num+="."
+	num+=${extension}
+
+	echo ${num}
+
+	mv "$full_filename" "$num"
 done
 
 # 1. loops over all the markdown files in Data folder
