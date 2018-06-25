@@ -1,5 +1,22 @@
 #!/bin/bash
 
+# files are like this: 10-body-background-5.html
+
+# take the beginning number and add 3 to it for all the .html files in the directory
+
+for full_filename in *.html; do extension="${full_filename##*.}"
+	filename="${full_filename%.*}"
+	first_two_characters="${filename:0:2}"
+	rest_characters="${filename:2:5}"
+
+	num=$((first_two_characters + 1))
+
+	echo "${num}"
+	echo "${rest_characters}"
+
+	echo ${full_filename:2}  
+done
+
 # 1. loops over all the markdown files in Data folder
 # 2. makes folders with those filenames without the extensions
 # 3. moves the file into that newly created folder
