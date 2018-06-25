@@ -14,14 +14,11 @@ for full_filename in *.html; do extension="${full_filename##*.}"
 
 	echo ${filename_without_first_two_chars}
 
-	num+="-"
-	num+=filename_without_first_two_chars
-	num+="."
-	num+=${extension}
+	num+=${filename_without_first_two_chars}
 
 	echo ${num}
 
-	mv "$full_filename" "$num"
+	# mv "$full_filename" "$num"
 done
 
 # 1. loops over all the markdown files in Data folder
