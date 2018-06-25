@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# files are like this: 10-body-background-5.html
+# files are like this: 10-dfdsfsdfsdf.html
 
 # take the beginning number and add 3 to it for all the .html files in the directory
 
