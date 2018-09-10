@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#rename all file extensions recursively from .md to .txt
+find . -name "*.md" -exec bash -c 'mv "$1" "${1%.md}".txt' - '{}' \;
+
 # files are like this: 10-dsfsdfjsldf.html
 # for all the .html files in the directory, rename the files so that the beginning number has 2 added to it
 for full_filename in *.html; do extension="${full_filename##*.}"
